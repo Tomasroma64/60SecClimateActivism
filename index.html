@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="//unpkg.com/d3-scale"></script>
+    <script src="//unpkg.com/globe.gl"></script>
+
     <title>Climate Activism 60" Challenge</title>
 
     
@@ -33,6 +36,11 @@
 </head>
 
 <body>
+
+    
+    <div style="position: fixed; z-index: -100;left:50vw; top:30vh;">
+        <div id="globeViz"></div>
+    </div>
 
     <div class="px-3 vh-100 vw-100" style="max-width: 800px; margin: auto;">
         <p id="main" class="display-1 my-0" style="font-size: 10vh;">Climate <br> Activism <br> <b style="font-size: 20vh;">60"</b> <br> Challenge</p> 
@@ -91,7 +99,6 @@
                 </div>
                 
 
-    <script src="js/scripts.js"></script>
     <script src="script.js"></script>
         
 </body>
