@@ -37,7 +37,7 @@
 
 <body>
     
-    <div class="px-3 vh-100 vw-100" style="max-width: 800px; margin: auto;">
+    <div class="px-3 vh-100 vw-100 scroll-page" style="max-width: 800px; margin: auto;">
         <a href="http://seethroughnews.org" style="text-decoration: none;background:none;">
             <b id="main" style="font-size: 3vh;"> 
                 <span style="color:#5D2E1C">SEE</span>
@@ -54,17 +54,24 @@
         </p> 
         <p class="px-3">Speeding Up Carbon Drawdown by Helping the Inactive Become Active</p>
 
-        <div style="max-width: 800px;width:95%; position: absolute; bottom:25px; height:10%">
+        <div style="max-width: 800px;width:95%; position: absolute; bottom:10vh; height:10%">
+            <div> 
+                <button onclick="focusOnResults()" class="m-1 p-1" style="border: solid black 2px; color:black"><b>See results</b></button>
+                <a href="/share.html" style="background: none;">
+                    <button class="m-1 p-1" style="border: solid black 2px; color: black;"><b>Share this page</b></button>
+                </a>
+            </div>
             <button id="poll-link" class="accent block p-3" style="width:95%;">📝Take the poll</button>
         </div>
-        <div style="position: fixed; z-index: -100;left:50vw; top:30vh;">
+        <div style="position: fixed; z-index:-100; left:50vw; top:30vh;">
             <div id="globeViz"></div>
         </div>
+        
     </div>
     
     
-    <div id="results" style="max-width: 800px; padding-top: 20px; display: none;">
-        <h1 class="text-align-center">✨Thank you!</h1>
+    <div id="results" class="scroll-container"  style="max-width: 800px; padding-top: 20px; display: none;">
+        <h1 id="thank-you"class="text-align-center" style="display: none;">✨Thank you!</h1>
         <div class="px-3">
             <p class="display-3">1. Average Responses</p>
             <p class="my-0">Some introduction of some sort</p>
@@ -106,9 +113,13 @@
                     obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
                     nihil, eveniet aliquid culpa officia aut!</p>
                 </div>
-                
+               
+                <script>
+                    var scroll = new SmoothScroll('a[href*="#"]');
+                </script>
 
     <script src="script.js"></script>
+
         
 </body>
 </html>

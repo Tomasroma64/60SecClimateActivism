@@ -23,8 +23,14 @@ pollLink.onclick = function() {
         pollLink.disabled = true;
     }
 
+    document.getElementById("thank-you").style.display = 'block';
+    focusOnResults();
+}
+
+
+function focusOnResults(){
     document.getElementById("results").style.display = 'block';
-    document.getElementById("results").scrollIntoView();
+    document.getElementById("poll-link").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
 }
 
 // Globe

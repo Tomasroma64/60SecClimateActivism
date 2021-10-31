@@ -1,6 +1,7 @@
 body{
-    overflow-x: hidden
+    overflow-x: hidden;
 }
+
 #main {
     font-family: 'Zen Antique', serif;
 }
@@ -14,3 +15,4 @@ a{
 }
 
 
+  
