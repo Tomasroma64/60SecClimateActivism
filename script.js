@@ -10,6 +10,23 @@ pollLink.onclick = function() {
     document.getElementById("results").scrollIntoView();
 }
 
-// Scroll and show results
+// Globe
+const elem = document.getElementById('globeViz');
+const globe = Globe()
+    .backgroundColor('white')
+    .globeImageUrl("img/terrain.jpg")
+    .atmosphereColor("green")
+    .showGraticules(true)
+    .showAtmosphere(true)
+    (elem);
+
+ globe.pointOfView({
+    lat: 0.5,
+    lng: 0.5,
+    altitude: 4
+})
+globe.controls().autoRotate = true;
+globe.controls().autoRotateSpeed = -1.8;
 
 
+    
