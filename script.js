@@ -15,6 +15,7 @@ const elem = document.getElementById('globeViz');
 const globe = Globe()
     .backgroundColor('white')
     .globeImageUrl("img/terrain.jpg")
+    .bumpImageUrl("img/bump2.png")
     .atmosphereColor("green")
     .showGraticules(true)
     .showAtmosphere(true)
