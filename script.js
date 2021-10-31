@@ -9,9 +9,11 @@ polls = [
 ]
 
 var pollLink = document.querySelector('#poll-link');
+var pollsTaken = 0
 
 pollLink.onclick = function() {
-    pollLink.innerText = '📝Take another poll'
+    pollsTaken++;
+    pollLink.innerText = `📝Take another poll (${pollsTaken}/${polls.length})`
 
     let randomPoll = Math.floor(Math.random() * polls.length)
     window.open(polls[randomPoll], '_blank');
