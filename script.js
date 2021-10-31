@@ -1,11 +1,28 @@
 // Change link of poll
-polls = ["https://forms.gle/zLwEhGLg7Sxp3dPx9"]
+polls = [
+    "https://forms.gle/ZoyBiYgdXYMDjx3Z7",
+    "https://forms.gle/D9NPdqZQ73p3YGVF9",
+    "https://forms.gle/CdUigPtZSgsfGtt29",
+    "https://forms.gle/wEWXKsWUTCsH7tLW9",
+    "https://forms.gle/Njpbbw3vdWJ7akDaA",
+    "https://forms.gle/w8GJe5PgR8xVKhn97"
+]
 
 var pollLink = document.querySelector('#poll-link');
 
 pollLink.onclick = function() {
     pollLink.innerText = '📝Take another poll'
-    window.open(polls[Math.floor(Math.random() * polls.length)], '_blank');
+
+    let randomPoll = Math.floor(Math.random() * polls.length)
+    window.open(polls[randomPoll], '_blank');
+    polls.splice(randomPoll, 1);
+
+    if(polls.length == 0){
+        pollLink.innerText = 'Congratulations! You have taken every poll!'
+        pollLink.classList.add("fixed")
+        pollLink.disabled = true;
+    }
+
     document.getElementById("results").style.display = 'block';
     document.getElementById("results").scrollIntoView();
 }
